@@ -36,43 +36,52 @@ body {
 .card-image {
   width: 400px;
   height: auto;
-  border-radius: 20px 0 0 20px;
-  object-fit: contain;
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+  background-size: 120%;
 }
 
 .card-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
-  width: 500px;
+  padding: 2rem 3rem 2em 3rem;
+  width: 550px;
   background-color: white;
-  border-radius: 0 20px 20px 0;
+  border-radius: 0 15px 15px 0;
 }
 
 .card-title {
-  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.card-description {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: $secondary-color;
+  line-height: 1.5rem;
+  font-size: 1rem;
 }
 
 .card-bottom {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .card-author-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin: 20px;
+  margin: 15px 15px 15px 0;
 }
 
 .card-bottom-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.3rem;
+  flex-grow: 1;
 }
 
 .card-date {
@@ -85,12 +94,21 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-}
 
-.icon-share {
-  width: 20px;
-  height: 20px;
-  padding: 20px;
-  border-radius: 50%;
+  img {
+    width: 18px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $bg-color;
+    padding: 12px;
+    box-sizing: content-box;
+    overflow: visible;
+    cursor: pointer;
+  }
+  &:active {
+    img {
+      background-color: $secondary-color;
+      fill: $bg-color;
+    }
+  }
 }
